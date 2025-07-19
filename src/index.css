@@ -1,87 +1,85 @@
-html, body {
-    margin: 0;
+header {
+    background-color: red;
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-family: inter;
 }
 
 body {
-    font-family: Inter;
+    margin: 0;
 }
-
-.container {
-    margin: 45px 40px;
-}
-
-header {
-    background: #F55A5A;
+.entries {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    color: white;
-    height: 55px;
 }
-
-header > img {
-    width: 24px;
-    margin-right: 7px;
-}
-
-header > h1 {
-    font-size: 0.9rem;
-    font-weight: 500;
-}
-
-article.journal-entry {
+.entry {
     display: flex;
+    padding: 40px;
+    width: 500px;
+    flex-shrink: 0
 }
 
-article.journal-entry .marker {
-    width: 7px;
+.image-container {
+    border-radius: 20px;
+    width: 230px;
+    height: 300px;
+    margin-right: 10px;
+    overflow: hidden;
+    flex-shrink: 0
+}
+
+.image-container img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    margin-right: 40px;
+    
+}
+
+.info {
+    padding-top: 5px;
+    margin-left: 10px;
+}
+
+.info img {
+    width: 10px;
     margin-right: 4px;
 }
 
-article.journal-entry .main-image-container {
-    width: 125px;
-    height: 168px;
-    overflow: hidden;
-    border-radius: 5px;
-    flex-shrink: 0;
-    margin-right: 19px;
-}
-
-article.journal-entry .main-image {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-.info-container span.country {
+.country {
+    font-weight:bold;
     text-transform: uppercase;
     font-size: 0.7rem;
     margin-right: 12px;
+    font-family: inter;
 }
 
-.info-container a {
-    color: #2B283A;
+.info a {
+    color: grey;
+    font-family: inter;
     font-size: 0.7rem;
 }
 
-.info-container a:visited {
-    color: #918E9B;
+.info h3 {
+    font-family: inter;
+    font-size: 2rem;
+    margin-top: 5px;
+    margin-bottom: 0px;
 }
 
-.info-container h2.entry-title {
-    margin-top: 7px;
-    margin-bottom: 17px;
+.info p {
+    font-family: inter;
+    margin-top: 5px;
 }
 
-.info-container p.trip-dates {
+.date {
+    font-family: inter;
+    font-size: 1.5rem;
     font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
-.info-container p.entry-text {
-    line-height: 1.5;
-    font-size: 0.8rem;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;  
-    overflow: hidden;
-}
